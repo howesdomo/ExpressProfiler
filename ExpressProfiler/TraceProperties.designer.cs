@@ -47,9 +47,10 @@
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(221, 3);
+            this.btnRun.Location = new System.Drawing.Point(295, 3);
+            this.btnRun.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(75, 23);
+            this.btnRun.Size = new System.Drawing.Size(100, 27);
             this.btnRun.TabIndex = 0;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
@@ -62,16 +63,18 @@
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnRun);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 555);
+            this.panel1.Location = new System.Drawing.Point(0, 641);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 29);
+            this.panel1.Size = new System.Drawing.Size(508, 33);
             this.panel1.TabIndex = 1;
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(107, 3);
+            this.btnReset.Location = new System.Drawing.Point(143, 3);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.Size = new System.Drawing.Size(100, 27);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             // btnSaveAsDefault
             // 
-            this.btnSaveAsDefault.Location = new System.Drawing.Point(5, 3);
+            this.btnSaveAsDefault.Location = new System.Drawing.Point(7, 3);
+            this.btnSaveAsDefault.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSaveAsDefault.Name = "btnSaveAsDefault";
-            this.btnSaveAsDefault.Size = new System.Drawing.Size(96, 23);
+            this.btnSaveAsDefault.Size = new System.Drawing.Size(128, 27);
             this.btnSaveAsDefault.TabIndex = 2;
             this.btnSaveAsDefault.Text = "Save as default";
             this.btnSaveAsDefault.UseVisualStyleBackColor = true;
@@ -90,9 +94,10 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(302, 3);
+            this.btnCancel.Location = new System.Drawing.Point(403, 3);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 27);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -103,67 +108,75 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(381, 555);
+            this.tabControl1.Size = new System.Drawing.Size(508, 641);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.edFilters);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(373, 529);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage1.Size = new System.Drawing.Size(500, 612);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Filters";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // edFilters
             // 
+            this.edFilters.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.edFilters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.edFilters.HelpVisible = false;
-            this.edFilters.Location = new System.Drawing.Point(3, 3);
+            this.edFilters.Location = new System.Drawing.Point(4, 3);
+            this.edFilters.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.edFilters.Name = "edFilters";
             this.edFilters.PropertySort = System.Windows.Forms.PropertySort.Categorized;
             this.edFilters.SelectedObject = this.btnCancel;
-            this.edFilters.Size = new System.Drawing.Size(367, 523);
+            this.edFilters.Size = new System.Drawing.Size(492, 606);
             this.edFilters.TabIndex = 0;
             this.edFilters.ToolbarVisible = false;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.edEvents);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(373, 482);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage2.Size = new System.Drawing.Size(500, 611);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Columns and events";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // edEvents
             // 
+            this.edEvents.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.edEvents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.edEvents.Location = new System.Drawing.Point(3, 3);
+            this.edEvents.Location = new System.Drawing.Point(4, 3);
+            this.edEvents.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.edEvents.Name = "edEvents";
             this.edEvents.SelectedObject = this.btnRun;
-            this.edEvents.Size = new System.Drawing.Size(367, 476);
+            this.edEvents.Size = new System.Drawing.Size(492, 605);
             this.edEvents.TabIndex = 1;
             this.edEvents.ToolbarVisible = false;
             // 
             // TraceProperties
             // 
             this.AcceptButton = this.btnRun;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(381, 584);
+            this.ClientSize = new System.Drawing.Size(508, 674);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "TraceProperties";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

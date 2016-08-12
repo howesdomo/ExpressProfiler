@@ -21,7 +21,7 @@ namespace ExpressProfiler
 {
     public partial class MainForm : Form
     {
-        internal const string versionString = "Express Profiler v2.2";
+        internal const string versionString = "Express Profiler V 1.0.0.1 Howe Edition";
 
         private class PerfInfo
         {
