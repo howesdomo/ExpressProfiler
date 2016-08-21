@@ -11,6 +11,8 @@ namespace ExpressProfiler
         [STAThread]
         static void Main()
         {
+            System.IO.Directory.CreateDirectory(Program.DirectoryPath);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.Automatic);
@@ -22,6 +24,32 @@ namespace ExpressProfiler
         {
             MessageBox.Show(((Exception)e.ExceptionObject).Message , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        public static string FileName = "ExpressProfilerDB.xml";
+
+        /// <summary>
+        /// 目录
+        /// </summary>
+        public static string DirectoryPath =
+            System.IO.Path.Combine(
+                System.IO.Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+                    , "HoweSoftware"
+                ),
+                "ExpressProfiler"
+            )
+            ;
+
+        /// <summary>
+        /// 文件路径
+        /// </summary>
+        public static string FullName =
+            System.IO.Path.Combine(
+                  Program.DirectoryPath
+                , Program.FileName
+            );
+
+
 
     }
 }
