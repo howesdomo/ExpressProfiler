@@ -88,13 +88,20 @@ namespace ExpressProfiler
 
         private void initEvent()
         {
+            this.FormClosing += FrmConn_FormClosing;
+
             this.btnAdd.Click += btnAdd_Click;
             this.btnEdit.Click += btnEdit_Click;
             this.btnDel.Click += btnDel_Click;
+            
             this.treeView1.NodeMouseDoubleClick += treeView1_NodeMouseDoubleClick;
 
         }
 
+        void FrmConn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
 
 
         void btnAdd_Click(object sender, EventArgs e)

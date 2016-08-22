@@ -21,7 +21,7 @@ namespace ExpressProfiler
 {
     public partial class MainForm : Form
     {
-        internal const string versionString = "Express Profiler V 1.0.1.0 Howe Edition";
+        internal const string versionString = "Express Profiler V 1.0.1.1 Howe Edition";
 
         private class PerfInfo
         {
@@ -909,6 +909,8 @@ namespace ExpressProfiler
             this.frmConn = new FrmConn();
             frmConn.Top = this.Top;
             frmConn.Height = this.Height;
+            frmConn.Left = this.Left - frmConn.Width + 20;
+
             this.frmConn.Show();
             this.initFrmConnEvent();
 
@@ -1735,7 +1737,31 @@ namespace ExpressProfiler
 
         private void initFrmConnEvent()
         {
+            this.Activated += MainForm_Activated;
+            this.Deactivate += MainForm_Deactivate;
+
             this.frmConn.ChangeDataBase += frmConn_ChangeDataBase;
+        }
+
+        void MainForm_Activated(object sender, EventArgs e)
+        {
+            if (this.frmConn.WindowState == FormWindowState.Minimized)
+            {
+                this.frmConn.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        void MainForm_Deactivate(object sender, EventArgs e)
+        {
+            if (this.frmConn.WindowState == FormWindowState.Normal && this.WindowState == FormWindowState.Minimized)
+            {
+                this.frmConn.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        void MainForm_MinimumSizeChanged(object sender, EventArgs e)
+        {
+            this.frmConn.WindowState = FormWindowState.Minimized;
         }
 
         void frmConn_ChangeDataBase(object sender, ChangeDataBaseEventArgs e)
@@ -1768,6 +1794,10 @@ namespace ExpressProfiler
 
         private void connPanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (this.frmConn.WindowState == FormWindowState.Minimized)
+            {
+                this.frmConn.WindowState = FormWindowState.Normal;
+            }
             this.frmConn.Activate();
         }
 
