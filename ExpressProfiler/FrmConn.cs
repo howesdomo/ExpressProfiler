@@ -95,7 +95,7 @@ namespace ExpressProfiler
             this.btnDel.Click += btnDel_Click;
             
             this.treeView1.NodeMouseDoubleClick += treeView1_NodeMouseDoubleClick;
-
+            this.treeView1.KeyUp += TreeView1_KeyUp;
         }
 
         void FrmConn_FormClosing(object sender, FormClosingEventArgs e)
@@ -164,6 +164,20 @@ namespace ExpressProfiler
             }
         }
 
+
+        private void TreeView1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && this.treeView1.SelectedNode != null)
+            {
+                TreeNode tn = this.treeView1.SelectedNode;
+                object treeNodeTag = tn.Tag;
+                if (treeNodeTag != null && treeNodeTag is ChangeDataBaseEventArgs)
+                {
+                    this.OnChangeDataBase(treeNodeTag as ChangeDataBaseEventArgs);
+                }
+            }
+        }
+
         void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             TreeNode tn = e.Node;
@@ -172,7 +186,6 @@ namespace ExpressProfiler
             {
                 this.OnChangeDataBase(treeNodeTag as ChangeDataBaseEventArgs);
             }
-
         }
 
         public event EventHandler<ChangeDataBaseEventArgs> ChangeDataBase;
